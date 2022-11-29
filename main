@@ -1,1 +1,23 @@
+Données du profil
 
+	- Mot de passe
+	- Mail/Num
+	- username/@
+	- Image avatar/bannière
+	- Certif bool
+	- Bio
+
+Données de l'interface
+
+	- Twots
+	- nb follows/abonnements/commentaires/likes + qui ils sont
+	- paramètres importants
+	- nb points/awards
+	- commentaires
+
+Arborescence
+
+main/home
+main/profil
+main/settings
+main/settings/profil
