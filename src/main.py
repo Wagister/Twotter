@@ -28,9 +28,5 @@ def userpage(request: Request, username: str, twots: list = []): #Après il faud
     return templates.TemplateResponse('user.html', {'request' : request, "username":username, "displayname":username, "twots": twots})
 
 @app.post('/{username}')
-def post_tweet(request: Request, username: str, content: str = Form()):
-    return userpage(request, username, [{"username": username, "content": content}])
-
-"""@app.get('/{user}/tweet')
-def tweet(user: str, limit: int = 10, sort: Optional[str] = None):
-    return {'tweet': f'{limit} tweets depuis la BdD'}"""
+def post_tweet(request: Request, username: str, content: str = Form(), amount: Optional[int] = 1):
+    return userpage(request, username, [{"username": username, "content": content} for _ in range(amount)])
