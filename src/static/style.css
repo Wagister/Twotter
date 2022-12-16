@@ -1,0 +1,154 @@
+:root {
+    --background-color: #0c0f1d;
+    --secondary-background-color: #1b1d2a;
+
+    --font-family : Arial, Helvetica, sans-serif, sans-serif;
+    --text-color: #fff;
+    --secondary-text-color: #9c9c9c;
+    
+    --border-radius: 16px;
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+.text {
+    margin: 0;
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+}
+
+.menu-element {
+    width: 250px;
+    padding-bottom: 25px;
+    font-weight: lighter;
+    color: var(--secondary-text-color);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    width: 100%;
+}
+
+.center-column {
+    display: inline-block;
+    margin: auto 0 ;
+    
+    max-width: 600px;
+}
+
+.trendings {
+    display: flex;
+    justify-content: left;
+
+    width: 100%;
+}
+
+.panel {
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-background-color);
+    padding: 10px;
+    width: auto;
+    height: auto;
+}
+
+.top-panel {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius:var(--border-radius);
+    border-top-right-radius:var(--border-radius);
+
+    margin-bottom: 5px;
+}
+
+.middle-panel {
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.bottom-panel {
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+    border-bottom-left-radius:var(--border-radius);
+    border-bottom-right-radius:var(--border-radius);
+    
+    margin-bottom: 16px;
+}
+
+.twot-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+}
+
+.image {
+    width: 100%;
+    border-radius: 16px; 
+    margin-top: 10px;
+}
+
+.video {
+    width: 100%;
+    border-radius: 16px; 
+    margin-top: 10px;
+}
+
+.icon {
+    filter: invert(66%) sepia(0%) saturate(0%) hue-rotate(110deg) brightness(94%) contrast(93%);
+    padding-right: 10%;
+    padding-left: 10%;
+    height: 100%;
+}
+
+.counter {
+    margin-left:calc(-10% + 5px);
+    width: calc(10% - 5px);
+    color: var(--secondary-text-color);
+}
+
+.pfp {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-right: 10px;
+}
+
+.pfp-large {
+    border-radius: 100%;
+    width: 100px;
+    height: auto;
+    margin-top: -64px;
+    z-index: 1;
+    position: relative;
+}
+
+.username {
+    color: var(--secondary-text-color);
+}
+
+.panel textarea {
+    border-style: None;
+    background-color: var(--background-color);
+    outline-width: 0px;
+    min-width: calc(100% - 20px);
+    width: calc(100% - 20px);
+    height: 100px;
+    max-height: 100px;
+    bottom: 0px;
+}
+
+.twot-button {
+    background-color: #3e4786;
+    border-style: none;
+    border-radius: var(--border-radius);
+    width: 100%;
+    height: 30px;
+    margin-top: 8px;
+    cursor: pointer;
+}
