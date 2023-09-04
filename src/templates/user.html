@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twotter</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <h1 class="text">🐦 Twotter</h1>
+    
+    <div style="display: flex;">
+        <div class="menu"></div>
+        <div class="center-column">
+            <div>
+                <img class="top-panel" style="max-width: 600px;" src="../static/images/banner.jpg">
+                <div class="panel bottom-panel" style="margin-bottom: 8px;">
+                    <img class="pfp-large" src="../static/images/trump.jpg">
+                    <h2 class="text">{{displayname}}</h3>
+                    <p class="text username">@{{username}}</p>
+                </div>
+            </div>
+            
+            <div class="panel" style="margin-bottom: 16px;">
+                <div style="height: 50px; padding-bottom: 10px;">
+                    <image class="pfp autor" src="../static/images/Trump.jpg"/>
+    
+                    <div> 
+                        <h3 class="text">{{displayname}}</h3>
+                        <h5 class="text username" >@{{username}}</h5>
+                    </div>
+                </div>
+
+                <form method="post" id="content">
+                    <textarea class="panel text" name="content" style="resize: none;"></textarea>
+                    <button class="twot-button text" type="submit">Twot</button>
+                </form>
+            </div>
+            
+            <h2 class="text" style="margin-bottom: 4px;">Twots</h2>
+
+            {% for twot in twots %}
+            <div>
+                <div class="panel top-panel">
+                    <div style="height: 50px; padding-bottom: 10px;">
+                        <image class="pfp autor" src="../static/images/trump.jpg"/>
+                
+                        <div> 
+                            <h3 class="text">{{twot.username}}</h3>
+                            <h5 class="text username" >@{{twot.username}}</h5>
+                        </div>
+                    </div>
+
+                    <p class="text">{{twot.content}}</p>
+                </div>
+
+                <div class="panel bottom-panel twot-bottom">
+                    <img class="icon" src="../static/icons/reply.svg"/>
+                    <p class="text counter">0</p>
+                    <img class="icon" src="../static/icons/heart.svg"/>
+                    <p class="text counter">0</p>
+                    <img class="icon" src="../static/icons/bookmark.svg"/>
+                    <p class="text counter">0</p>
+                    <img class="icon" src="../static/icons/share.svg"/>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="trendings"></div>
+    </div>    
+</body>
+</html>
